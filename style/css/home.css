@@ -75,6 +75,46 @@ h2{
     flex-direction: row;
     justify-content: space-evenly;
 }
+.main-container-links{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    position:fixed;
+    right: 100px;
+    overflow: hidden;
+}
+.main-container-links .icon{
+    display: none;
+}
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 900px) {
+    .main-container-links  {
+        display: flex;
+        flex-direction: column;
+        padding-right: 20px;
+        vertical-align:middle;
+    }
+    .main-container-links a {display: none;}
+    .main-container-links a.icon {
+      float: right;
+      display: block;
+    }
+  }
+  
+  /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+  @media screen and (max-width: 900px) {
+    .main-container-links.responsive {position: relative;}
+    .main-container-links.responsive a.icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .main-container-links.responsive a {
+      float: none;
+      display: block;
+      text-align:left;
+    }
+  }
 .icon-container{
     color: black;
     font-size: 18px;
@@ -92,48 +132,56 @@ h2{
     font-size: 36px;
 }
 .about-section{
-    height: 600px;
+    height: auto;
     background-color: #f0f8ff;
     align-content: center;
+
+
 
 }
 .about-container{
     display: flex;
     flex-direction: row;
-    margin-inline: 100px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 30px 100px;
+
 }
 .about{
-    width: 100%;
-    height: 500px;
+    width: 50%;
+    min-width: 400px;
     border-radius: 20px;
+    padding-block: 20px;
 
 }
 .about-image{
     border-radius: 20px;
-    width: 700px;
+    width: 90%;
+    height: auto;
 }
 
 .about-row{
     background-color: white;
     border-radius: 20px;
-    height: 250px;
+    height: 47%;
     align-content: center;
     padding-inline: 20px;
     margin-bottom: 25px;
     text-align: center;
 }
 .director-section{
-    height: 600px;
+    height: auto;
     background-color:white;
     align-content: center;
 }
 .director-image{
     border-radius: 20px;
     box-shadow: 5px 5px #f4f4f4;
-    height: 500px;
+    height: auto;
+    max-height: 400px;
 }
 .projects-section{
-    height: 300px;
+    height: auto;
     background-color: #f0f8ff;
     align-content: center;
 }
@@ -145,6 +193,7 @@ h2{
 .projects-row{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 .projects{
@@ -152,9 +201,11 @@ h2{
     display: flex;
     flex-direction: column;
     padding-right: 30px;
+    min-width: 200px;
+    max-width: 500px;
 }
 .involve-section{
-    height: 300px;
+    height: auto;
     background-color: white;
     align-content: center;
 }
@@ -162,7 +213,7 @@ h2{
     color: #5a6f80;
 }
 .contact-section{
-    height: 400px;
+    height: auto;
     background-color: #f0f8ff;
     align-items: center;
     display: flex;
@@ -173,11 +224,15 @@ h2{
     flex-direction: column;
     width: 50%;
     padding-right: 100px;
+    flex-wrap: wrap;
+
 }
 .right-contact{
     display: flex;
     flex-direction: column;
-    padding-left: 100px;
+    /* padding-left: 100px; */
+    flex-wrap: wrap;
+
 }
  .form-input{
     margin-bottom: 10px;
