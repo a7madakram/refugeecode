@@ -79,7 +79,7 @@ h2{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    position:fixed;
+    /* position:fixed; */
     right: 100px;
     overflow: hidden;
 }
