@@ -80,7 +80,7 @@ h2{
     flex-direction: row;
     justify-content: space-evenly;
     /* position:fixed; */
-    right: 100px;
+    /* right: 100px; */
     overflow: hidden;
 }
 .main-container-links .icon{
@@ -92,7 +92,7 @@ h2{
         display: flex;
         flex-direction: column;
         padding-right: 20px;
-        vertical-align:middle;
+        /* vertical-align:middle; */
     }
     .main-container-links a {display: none;}
     .main-container-links a.icon {
@@ -225,10 +225,12 @@ h2{
     width: 50%;
     padding-right: 100px;
     flex-wrap: wrap;
-
+    /* justify-content:center; */
 }
 .right-contact{
     display: flex;
+    width: auto;
+    /* height: 315px; */
     flex-direction: column;
     /* padding-left: 100px; */
     flex-wrap: wrap;
@@ -239,7 +241,10 @@ h2{
     border-radius: 5px;
     border-color:#5cc1ad;
     border: 0;
- }
+    height: 873px;
+    width: 744px;
+
+}
  .form-input::placeholder{
     font-family:'Times New Roman', Times, serif;
     font-weight:lighter;
